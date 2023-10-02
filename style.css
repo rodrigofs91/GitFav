@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  padding: 11.5rem 4rem;
+  color: #e1e1e6;
+  background-color: #000000;
+}
+
+body,
+input,
+button.btn-fav,
+button.btn-action {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+tbody.hiden,
+.no-favorite.hiden {
+  display: none;
+}
+
+#app {
+  max-width: 112rem;
+  margin-inline: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+
+  margin-bottom: 8.7rem;
+}
+
+header .input-header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 0.8rem;
+
+  flex: 1;
+}
+
+header .input-header input {
+  font-weight: 400;
+  font-size: 1.6rem;
+  width: 100%;
+  max-width: 43rem;
+  padding: 1.6rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: #e1e1e6;
+  background-color: #06181c;
+}
+
+header .input-header input::placeholder {
+  font-weight: 400;
+}
+
+header .input-header button.btn-fav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+
+  padding: 1.2rem 3.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: #065e7c;
+
+  transition: background-color 0.3s ease;
+}
+
+header .input-header button.btn-fav:hover {
+  background-color: #ffffff;
+}
+
+header .input-header button.btn-fav .icon-btn {
+  width: 2.4rem;
+  height: 2.4rem;
+
+  background-image: url("/assets/star-white.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  transition: background-image 0.3s ease;
+}
+
+header .input-header button.btn-fav:hover .icon-btn {
+  background-image: url("/assets/star-blue.svg");
+}
+
+header .input-header button.btn-fav span {
+  margin-top: 0.275rem;
+  font-size: 1.4rem;
+  color: #ffffff;
+
+  transition: color 0.3s ease;
+}
+
+header .input-header button.btn-fav:hover span {
+  color: #065e7c;
+}
+
+main {
+  border-radius: 1.2rem;
+  border: 0.1rem solid #4a808c;
+
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #092d38;
+}
+
+thead tr th {
+  font-size: 2rem;
+  line-height: 160%;
+  text-align: start;
+  padding: 1.6rem 2.4rem 1.6rem 4rem;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #06161b80;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #06181c;
+  border-top: 0.1rem solid #4a808c;
+  border-bottom: 0.075rem solid #42666e;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tbody tr td {
+  font-size: 2rem;
+  line-height: 160%;
+  padding: 2.4rem 2.4rem 2.4rem 4rem;
+}
+
+tbody tr td.user {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+tbody tr td.user img {
+  width: 5.6rem;
+  height: 5.6rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+tbody tr td.user .infos {
+  display: flex;
+  flex-direction: column;
+}
+
+tbody tr td.user .infos a {
+  text-decoration: none;
+  color: #e1e1e6;
+}
+
+tbody tr td.user .infos a .username {
+  font-weight: 400;
+}
+
+tbody tr td button.btn-action {
+  cursor: pointer;
+  border: none;
+  color: #f75a68;
+  background: none;
+
+  font-size: 2rem;
+}
+
+.no-favorite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+
+  height: 62.4rem;
+  background-color: #030b0d;
+}
+
+.no-favorite img {
+  width: 13.2rem;
+  height: 12.5rem;
+  object-fit: cover;
+}
+
+.no-favorite span {
+  font-family: "Roboto Mono", monospace;
+  font-size: 4rem;
+  line-height: 61.953%;
+  color: #4e5455;
+}
